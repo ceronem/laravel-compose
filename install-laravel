@@ -1,0 +1,4 @@
+#!/bin/bash
+export CURRENT_UID=$(id -u):$(id -g)
+docker-compose run composer create-project --prefer-dist laravel/laravel .
+./init-laravel
