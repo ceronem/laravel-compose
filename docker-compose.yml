@@ -61,7 +61,7 @@ services:
     volumes:
       - ${APP_SRC}:/var/www/
   redis:
-    user: ${CURRENT_UID}
+#    user: ${CURRENT_UID}
     restart: always
     container_name: redis
     build:
@@ -95,6 +95,14 @@ services:
     container_name: composer
     build:
       context: ./containers/composer
+    volumes:
+      - ${APP_SRC}:/var/www
+  node:
+    user: ${CURRENT_UID}
+    working_dir: /var/www/
+    container_name: node
+    build:
+      context: ./containers/node
     volumes:
       - ${APP_SRC}:/var/www
 

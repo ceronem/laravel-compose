@@ -73,6 +73,11 @@ It will execute a composer command through the composer container e.g.
 ```bash
 ./composer install
 ``` 
+### node
+It will execute command through the node container e.g.
+```bash
+./node yarn run production
+``` 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
