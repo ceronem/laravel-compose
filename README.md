@@ -32,14 +32,17 @@ Do you have an existing Laravel Project? Just run:
 ./init-laravel
 ```
 Laravel Compose will update your Laravel .env with the env variables (please backup it first)
-Are you tired of working (we are all tired of working)? Just stop the everythings:
+Are you tired of working (we are all tired of working)? Just stop everythings:
 ```bash
 ./stop
 ```
 Go out, take a beer with friends and tell them how Laravel Compose is easy to use. Yes, your friends are all developers!!
-
+N.B. don't forget to add laravel-compose.local to your host file
+```bash
+sudo /bin/bash -c 'echo -e "127.0.0.1 laravel-compose.local" >> /etc/hosts'
+```
 ## Script
-Laravel Compose provides some usefull script:
+Laravel Compose provides some useful script:
 ### start
 It's a shortcut to 
 ```bash
