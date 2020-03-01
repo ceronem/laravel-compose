@@ -1,17 +1,17 @@
 #!/bin/bash
 
 source .env
-sed -i "s/APP_NAME=.*/APP_NAME=$APP_NAME/g" ./src/.env
-sed -i "s/DB_HOST=.*/DB_HOST=db/g" ./src/.env
-sed -i "s/DB_DATABASE=.*/DB_DATABASE=$MYSQL_DATABASE/g" ./src/.env
-sed -i "s/DB_USERNAME=.*/DB_USERNAME=$MYSQL_USER/g" ./src/.env
-sed -i "s/DB_PASSWORD=.*/DB_PASSWORD=$MYSQL_PASSWORD/g" ./src/.env
-sed -i "s/BROADCAST_DRIVER=.*/BROADCAST_DRIVER=redis/g" ./src/.env
-sed -i "s/CACHE_DRIVER=.*/CACHE_DRIVER=redis/g" ./src/.env
-sed -i "s/QUEUE_CONNECTION=.*/QUEUE_CONNECTION=redis/g" ./src/.env
-sed -i "s/SESSION_DRIVER=.*/SESSION_DRIVER=redis/g" ./src/.env
-sed -i "s/REDIS_HOST=.*/REDIS_HOST=redis/g" ./src/.env
-sed -i "s/MAIL_HOST=.*/MAIL_HOST=mailhog/g" ./src/.env
-sed -i "s/MAIL_PORT=.*/MAIL_PORT=1025/g" ./src/.env
+sed -i "s/APP_NAME=.*/APP_NAME=$APP_NAME/g" ${APP_SRC}.env
+sed -i "s/DB_HOST=.*/DB_HOST=db/g" ${APP_SRC}.env
+sed -i "s/DB_DATABASE=.*/DB_DATABASE=$MYSQL_DATABASE/g" ${APP_SRC}.env
+sed -i "s/DB_USERNAME=.*/DB_USERNAME=$MYSQL_USER/g" ${APP_SRC}.env
+sed -i "s/DB_PASSWORD=.*/DB_PASSWORD=$MYSQL_PASSWORD/g" ${APP_SRC}.env
+sed -i "s/BROADCAST_DRIVER=.*/BROADCAST_DRIVER=redis/g" ${APP_SRC}.env
+sed -i "s/CACHE_DRIVER=.*/CACHE_DRIVER=redis/g" ${APP_SRC}.env
+sed -i "s/QUEUE_CONNECTION=.*/QUEUE_CONNECTION=redis/g" ${APP_SRC}.env
+sed -i "s/SESSION_DRIVER=.*/SESSION_DRIVER=redis/g" ${APP_SRC}.env
+sed -i "s/REDIS_HOST=.*/REDIS_HOST=redis/g" ${APP_SRC}.env
+sed -i "s/MAIL_HOST=.*/MAIL_HOST=mailhog/g" ${APP_SRC}.env
+sed -i "s/MAIL_PORT=.*/MAIL_PORT=1025/g" ${APP_SRC}.env
 ./artisan config:clear
 ./artisan config:cache
