@@ -14,6 +14,8 @@ services:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     expose:
       - "3306"
+    ports:
+      - ${MYSQL_PORT}:3306
     volumes:
       - ${MYSQL_DB_PATH}:/var/lib/mysql
     depends_on:
