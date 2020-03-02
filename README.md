@@ -41,6 +41,7 @@ N.B. don't forget to add laravel-compose.local to your host file
 ```bash
 sudo /bin/bash -c 'echo -e "127.0.0.1 laravel-compose.local" >> /etc/hosts'
 ```
+N.B. Nginx will proxy all request from /socket.io to laravel-echo container
 ## Script
 Laravel Compose provides some useful script:
 ### start
