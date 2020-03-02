@@ -37,11 +37,12 @@ Are you tired of working (we are all tired of working)? Just stop everythings:
 ./stop
 ```
 Go out, take a beer with friends and tell them how Laravel Compose is easy to use. Yes, your friends are all developers!!
-N.B. don't forget to add laravel-compose.local to your host file
+
+<b>N.B.</b> don't forget to add laravel-compose.local to your host file
 ```bash
 sudo /bin/bash -c 'echo -e "127.0.0.1 laravel-compose.local" >> /etc/hosts'
 ```
-N.B. Nginx will proxy all request from /socket.io to laravel-echo container
+<b>N.B.</b> Nginx will proxy all request from /socket.io to laravel-echo container
 ## Script
 Laravel Compose provides some useful script:
 ### start
